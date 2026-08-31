@@ -1,0 +1,16 @@
+# Dependencias (cada um gera a sua com "npm install")
+node_modules/
+
+# Variaveis de ambiente com credenciais - nunca sobe pro git
+.env
+
+# Builds
+dist/
+dist-ssr/
+
+# Arquivos do sistema operacional / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.log
