@@ -8,6 +8,11 @@ const app = express();
 // Só o front publicado (e o localhost) podem chamar a API
 const origensPermitidas = (process.env.CORS_ORIGIN || 'http://localhost:5173').split(',');
 app.use(cors({ origin: origensPermitidas }));
+app.use(
+  express.json({
+    limit: '5mb',
+  }),
+);
 
 app.get('/api/status', (req, res) => {
   res.json({
