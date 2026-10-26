@@ -1,5 +1,11 @@
 # 🎧 BiblioMusic
 
+🔗 **[Ver o projeto no ar](https://bibliomusic.vercel.app)** · login de teste: `bia@exemplo.com` / `123456`
+
+> A API roda num plano gratuito e dorme quando fica parada. O primeiro acesso pode levar cerca de 1 minuto.
+
+![Demonstração do BiblioMusic: login, criação de playlist com capa, cadastro e exclusão de música](docs/demo.gif)
+
 Sistema web completo (CRUD) para gerenciar uma biblioteca de músicas pessoal — crie playlists, adicione músicas, edite e organize sua coleção, em um visual inspirado no iOS.
 
 Projeto desenvolvido individualmente por **Beatriz Ceciliato Robaskievicz da Cunha**.
