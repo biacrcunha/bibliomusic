@@ -35,8 +35,13 @@ export default function LoginPage() {
       }
       navigate('/biblioteca');
     } catch (err) {
-      const mensagem =
-        err.response?.data?.erro || 'Não foi possível conectar ao servidor.';
+      const status = err.response?.status;
+      // Sem resposta (API dormindo) ou erro 5xx (banco desligado):
+      // o problema é no servidor, não nos dados digitados.
+      const servidorIndisponivel = !status || status >= 500;
+      const mensagem = servidorIndisponivel
+        ? 'O servidor está iniciando. Aguarde cerca de 1 minuto e tente novamente.'
+        : err.response.data?.erro || 'Não foi possível concluir. Tente novamente.';
       setErro(mensagem);
     } finally {
       setCarregando(false);
